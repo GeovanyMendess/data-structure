@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "./stack/stack.h"
+#include "stack.h"
 
 int main (int argc, char** argv) {
 
@@ -20,6 +20,10 @@ int main (int argc, char** argv) {
     push(s,word_1);
     push(s,word_2);
     push(s,word_3);
+
+    show(s);
+
+    printf("\n\n\n");
 
     printf("%s\n",pop(s));
     printf("%s\n",pop(s));

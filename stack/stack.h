@@ -16,4 +16,9 @@ char *pop(stack *s);
 char *top(stack *s);
 //Empties the stack and return the number of elements removed
 int empties(stack *s);
+//Return 1 if stack is empty and 0 otherwise
+int isEmpty(stack *s);
+//Display the data structure without brake rules of stack acess
+void show(stack *s);
+
 #endif
