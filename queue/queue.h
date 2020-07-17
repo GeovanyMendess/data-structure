@@ -1,6 +1,6 @@
 
-#ifndef STACK_H
-#define STACK_H
+#ifndef QUEUE_H
+#define QUEUE_H
 
 //Defining the stack structure and the node
 //Each node stores one number, as an id and a string  
