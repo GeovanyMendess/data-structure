@@ -28,9 +28,9 @@ int searchTreeIt(tree *tree, int key);
 
 /*### Max and Min ###*/
 //Finds the smallest element at the tree
-node *min(node *root);
+int min(node *root);
 //Finds the greater element at the tree
-node *max(node *root);
+int max(node *root);
 
 /*### Sucessor and predecessor ###*/
 //Find the sucessor of a non null node, returning NULL if the node is the greater,

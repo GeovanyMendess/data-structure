@@ -122,7 +122,7 @@ int searchTreeIt(tree *tree, int key) {
 }
 
 //Finds the smallest element at the tree
-node *min(node *root) {
+int min(node *root) {
 
     if(root!=NULL) {
 
@@ -131,11 +131,11 @@ node *min(node *root) {
         }
     }
 
-    return root;
+    return root->key;
 }
 
 //Finds the greater element at the tree
-node *max(node *root) {
+int max(node *root) {
 
         if(root!=NULL) {
 
@@ -144,7 +144,7 @@ node *max(node *root) {
         }
     }
 
-    return root;
+    return root->key;
 }
 
 //Find the sucessor of a non null node, returning NULL if the node is the greater, 
