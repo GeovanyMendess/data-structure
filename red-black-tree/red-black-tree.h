@@ -1,13 +1,13 @@
-#ifndef BINARY_TREE_H
-#define BINARY_TREE_H
+#ifndef RED_BLACK_TREE_H
+#define RED_BLACK_TREE_H
 
-typedef struct tree tree;
+typedef struct rb_tree rb_tree;
 typedef struct node node; 
 
 //Create a empty tree and return
-tree *createTree();
+rb_tree *createTree();
 //Return a pointer to the tree root if there's exist
-node *root(tree *tree);
+node *root(rb_tree *tree);
 
 
 /*### Print tree functions ###*/
@@ -31,9 +31,9 @@ int max(node *root);
 
 /*### Inserting and deleting nodes ###*/
 //Insert a node in a tree, setting left and right to NULL and father to his father
-void insertTree(tree *tree, int key);
+void insertTree(rb_tree *tree, int key);
 //Delete a node from a tree, keeping the rules of the structure
-void treeDelete(tree *tree, int key);
+void treeDelete(rb_tree *tree, int key);
 
 
 #endif
