@@ -10,9 +10,9 @@ typedef struct node node;
 //Create a void queue structure and returns a pointer to it
 queue *createQueue();
 //Puts one element at the end of the queue and returns the id of the node
-int enqueue(queue *q,char *name);
+void enqueue(queue *q,char *name);
 //Removes the first element
-void dequeue(queue *q);
+char *dequeue(queue *q);
 //Display the first element
 void first(queue *q);
 //Return 1 if queue is empty and 0 otherwise

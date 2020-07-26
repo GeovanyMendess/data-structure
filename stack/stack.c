@@ -32,9 +32,6 @@ stack *createStack() {
 
 char *push(stack *s,char *word) {
 
-    // Getting word size
-    int word_size = strlen(word);
-
     node *element;
 
     element = (node*)malloc(sizeof(node));
@@ -103,7 +100,7 @@ int empties(stack *s) {
 
 int isEmpty(stack *s) {
 
-    if(s->top!=NULL){
+    if(s->top==NULL){
         return(1);
     } else {
         return(0);
@@ -126,6 +123,7 @@ void show(stack *s){
     while(s->top!=NULL){
         printAux = pop(s);
         printf("%s\n",printAux);
+        printf("--\n");
         push(aux,printAux);
     }
     while(aux->top!=NULL){

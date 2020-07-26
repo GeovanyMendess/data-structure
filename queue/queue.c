@@ -3,11 +3,9 @@
 #include <string.h>
 #include "queue.h"
 
-int id_increment=1;
 
 struct node {
 
-    int id;
     char *name;
     node *next;
 
@@ -40,7 +38,7 @@ queue *createQueue() {
 
 }
 
-int enqueue(queue *q,char *name) {
+void enqueue(queue *q,char *name) {
 
     node *new_node;
 
@@ -52,7 +50,6 @@ int enqueue(queue *q,char *name) {
     }
 
     new_node->name=name;
-    new_node->id=id_increment++;
     new_node->next=NULL;
     q->length++;
 
@@ -65,16 +62,18 @@ int enqueue(queue *q,char *name) {
         q->last=new_node;
     }
 
-    return(new_node->id);
+    return;
 }
 
-void dequeue(queue *q) {
+char *dequeue(queue *q) {
 
     node *aux;
+    char *removed;
 
     if(q->first!=NULL) {
 
         aux=q->first;
+        removed=q->first->name;
 
         if(q->first==q->last){  
             q->first=NULL;
@@ -93,7 +92,7 @@ void dequeue(queue *q) {
 
     }
 
-    return;
+    return removed;
 
 }
 
@@ -111,7 +110,6 @@ void first(queue *q) {
 
     if(q->first!=NULL){ 
 
-        printf("id: %d\n",q->first->id);
         printf("Name: %s\n",q->first->name);
 
     } else {

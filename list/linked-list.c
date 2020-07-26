@@ -81,6 +81,25 @@ int ascInsert(linked_list *l, int key, char *content) {
 
 }
 
+int isInside(linked_list *l, int key) {
+
+    node *aux;
+    aux=l->head;
+
+    while((aux!=NULL)&&(aux->key!=key)) {
+
+        aux=aux->next;
+
+    }
+
+    if((aux!=NULL)&&(aux->key==key)) {
+        return 1;
+    } else {
+        return 0;
+    }
+
+}
+
 //Display all elements at the list
 void show(linked_list *l){
 
