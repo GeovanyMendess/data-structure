@@ -8,6 +8,8 @@ typedef struct node node;
 tree *createTree();
 //Return a pointer to the tree root if there's exist
 node *root(tree *tree);
+//Display the value in the tree root
+void rootValue(tree *tree);
 
 
 /*### Print tree functions ###*/
@@ -25,9 +27,9 @@ int searchTree(node *node, int key);
 
 /*### Max and Min ###*/
 //Finds the smallest element at the tree
-int min(node *root);
+void min(node *root);
 //Finds the greater element at the tree
-int max(node *root);
+void max(node *root);
 
 /*### Inserting and deleting nodes ###*/
 //Insert a node in a tree, setting left and right to NULL and father to his father

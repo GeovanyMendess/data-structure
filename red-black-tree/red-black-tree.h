@@ -14,6 +14,7 @@ int rootKey(rb_tree *tree);
 
 
 /*### Print tree functions ###*/
+//All of these receive the tree and the root
 //Display the tree root, left and right elements, respectively 
 void preOrderTreeWalk(rb_tree *tree,node *node);
 //Display the tree left, root and right elements, respectively 
@@ -28,9 +29,9 @@ int searchTree(node *node, int key);
 
 /*### Max and Min ###*/
 //Finds the smallest element at the tree
-int min(node *root);
+void min(node *root);
 //Finds the greater element at the tree
-int max(node *root);
+void max(node *root);
 
 /*### Inserting and deleting nodes ###*/
 //Insert a node in a tree, setting left and right to NULL and father to his father

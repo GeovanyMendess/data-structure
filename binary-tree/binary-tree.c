@@ -116,7 +116,7 @@ int searchTree(node *node, int key) {
 }
 
 //Finds the smallest element at the tree
-int min(node *root) {
+void min(node *root) {
 
     if(root!=NULL) {
 
@@ -125,11 +125,16 @@ int min(node *root) {
         }
     }
 
-    return root->key;
+    if(root!=NULL){
+        printf("\n Min: %d\n\n",root->key);
+    } else {
+        printf("\n Empty tree. \n\n");
+    }
+
 }
 
 //Finds the greater element at the tree
-int max(node *root) {
+void max(node *root) {
 
         if(root!=NULL) {
 
@@ -138,7 +143,11 @@ int max(node *root) {
         }
     }
 
-    return root->key;
+    if(root!=NULL){
+        printf("\n Max: %d\n\n",root->key);
+    } else {
+        printf("\n Empty tree. \n\n");
+    }
 }
 
 /*### Inserting and deleting nodes ###*/
@@ -311,4 +320,14 @@ void treeDelete(tree *tree, int key) {
         return;
 }
 
+//Display the value in the tree root
+void rootValue(tree *tree) {
 
+    if(tree->root!=NULL) {
+        printf("Root: %d.\n\n",tree->root->key);
+    } else {
+        printf("Empty tree.\n\n");
+    }
+
+    return;
+}

@@ -304,6 +304,7 @@ void insertRB(rb_tree *tree, int key) {
 }
 
 /*### Print tree functions ###*/
+//All of these receive the tree and the root
 //Display the tree root, left and right elements, respectively 
 void preOrderTreeWalk(rb_tree *tree,node *node) {
 
@@ -429,4 +430,56 @@ int rootKey(rb_tree *tree) {
         return -1000;
     }
     
+}
+
+//Finds the smallest element at the tree
+void min(node *root) {
+
+    if(root!=NULL) {
+
+        while(root->left!=NULL) {
+            root = root->left;
+        }
+    }
+
+    if(root!=NULL){
+        printf("\n Min: %d\n\n",root->key);
+    } else {
+        printf("\n Empty tree. \n\n");
+    }
+
+}
+
+//Finds the greater element at the tree
+void max(node *root) {
+
+        if(root!=NULL) {
+
+        while(root->right!=NULL) {
+            root = root->right;
+        }
+    }
+
+    if(root!=NULL){
+        printf("\n Max: %d\n\n",root->key);
+    } else {
+        printf("\n Empty tree. \n\n");
+    }
+}
+
+int searchTree(node *node, int key) {
+
+    if((node==NULL)||(node->key==key)) {
+            if((node!=NULL)&&(node->key==key)) {
+                return 1;
+            } else {
+                 return 0;
+            }
+    }
+    if(key<node->key) {
+        return searchTree(node->left,key);
+    } else {
+        return searchTree(node->right,key);
+    }
+
 }
