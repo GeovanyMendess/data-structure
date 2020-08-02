@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   
-  <img src="data-structure/assets/data-structure-icon.png" alt="Data structure icon" width="80" height="80">
+  <img src="./assets/data-structure-icon.png" alt="Data structure icon" width="80" height="80">
   
 
   <h3 align="center">Best-README-Template</h3>
