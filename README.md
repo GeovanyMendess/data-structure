@@ -1,3 +1,14 @@
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  
+  <img src="./assets/data-structure-icon.png" alt="Data structure icon" width="80" height="80">
+  
+
+  <h3 align="center">Best-README-Template</h3>
+  
+</p>
+
 # Data Structures
 
 This repo is a collection of data structures built in C. Now it includes stack, queue, linked-list, binary-tree and red-black-tree. I'll update this repo constantly with other structures and improving the documentation with details of operations used in each one.
