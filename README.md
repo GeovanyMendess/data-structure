@@ -5,7 +5,7 @@
   <img src="./assets/data-structure-icon.png" alt="Data structure icon" width="150" height="150">
   
 
-  <h1 align="center">Data Strctures with C</h1>
+  <h1 align="center">Data Structures with C</h1>
   
 </p>
 
