@@ -38,7 +38,7 @@ int main (int argc, char** argv) {
                 printf("\n Removed element: %s\n\n",dequeue(q));
                 break;    
             case 3:
-                printf("\n First element: %s\n\n");
+                printf("\n First element: \n\n");
                 first(q);
                 break;
             case 4:
